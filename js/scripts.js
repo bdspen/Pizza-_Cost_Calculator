@@ -1,4 +1,4 @@
-var sizeSelect = function(){
-  var smallPizza = 10;
-  return smallPizza;
+function Pizza(size, price) {
+  this.size = size;
+  this.price = price;
 }
