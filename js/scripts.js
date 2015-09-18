@@ -1,21 +1,15 @@
 var prices = ["10", "12.50", "15"];
-var sizes =["small", "medium", "large"];
-var toppingTotal = "0";
+var sizes = ["small", "medium", "large"];
 
 //toppings
-var possibleToppings = [
-pepperoni = ".50",
-mushroom = ".50",
-peppers = ".50",
-onions = ".50",
-fetaOlive = "1.00",
-bacon = "1.00"
-];
-
-function CalculatePrice() {
-  toppingTotal = Pizza.topping[0];
-  return toppingTotal;
-  }
+var possibleToppings = {
+pepperoni: ".50",
+mushroom: ".50",
+peppers: ".50",
+onions: ".50",
+fetaOlive: "1.00",
+bacon: "1.00"
+};
 
 // function CalculatePrice() {
 //   var pizzaPrice =
@@ -25,8 +19,9 @@ function CalculatePrice() {
 //   }
 // }
 
+
 //Pizza Constructor
-function Pizza(size) {
+function Pizza(size, toppings) {
   this.size = size;
-  this.toppings = [];
+  this.toppingSet = [];
 }
