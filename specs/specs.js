@@ -1,11 +1,17 @@
 describe('Pizza', function() {
-  it('creates a new pizza with given specifications', function() {
-    var testPizza = new Pizza("small", 10);
+  it('creates a new pizza object with given specifications', function() {
+    var testPizza = new Pizza("small");
     expect(testPizza.size).to.equal("small");
-    expect(testPizza.price).to.equal(10);
-
   });
 });
+//
+// describe('Calculate Price', function() {
+//   it('returns the price of one topping', function() {
+//     var testPizza = new Pizza("small", onions);
+//     expect(testPizza.size).to.equal("small");
+//     expect(testPizza.price).to.equal(10);
+//   });
+// });
 
 
 
