@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="css/styles.css" rel="stylesheet" type="text/css">
+      <!-- <link href="css/normalize.css" rel="stylesheet" type="text/css"> -->
+      <script src="js/jquery-1.11.3.js"></script>
+      <script src="js/scripts.js"></script>
+      <title>Pizza Price Calculator</title>
+    </head>
+    <body>
+    <!-- Container for choosing size -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <button type="submit" class="btn btn-primary" id="size-small" >Small, 10"</button>
+          </div>
+          <div class="col-sm-4">
+            <button type="submit" class="btn btn-primary" id="size-medium">Medium, 13"</button>
+          </div>
+          <div class="col-sm-4">
+            <button type="submit" class="btn btn-primary" id="siz-large">Large, 16"</button>
+          </div>
+      </div>
+    </div>
+  <!-- Container for choosing toppings -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+          <form id="topping-checkbox">
+          <input type="checkbox" value="pepperoni">Pepperoni, $.50<br>
+          <input type="checkbox" value="mushroom">Mushroom, $.50<br>
+          <input type="checkbox" value="peppers">Peppers, $.50<br>
+          <input type="checkbox" value="onions">Onions, $.50<br>
+          <input type="checkbox" value="fetaOlive">Feta & Olive Oil, $1.00<br>
+          <input type="checkbox" value="bacon">Bacon, $1.00<br>
+          </form>
+          <button class="btn btn-success">Submit Order!</button>
+      </div>
+  </div>
+</div>
+
+    </body>
+
+</html>
