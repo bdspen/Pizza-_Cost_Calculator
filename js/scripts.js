@@ -24,15 +24,15 @@ Pizza.prototype.pizzaPrice = function(){
   return pizzaOrder[0];
 }
 
-var orderTotal = function() {
-  if(pizzaOrder.length == 1) {
+var orderTotal = function(pizzaOrder) {
+  var result = 0;
+  if(pizzaOrder.length <= 1) {
     return pizzaOrder[0];
   }else{
-    pizzaOrder = parseInt(pizzaOrder);
-    pizzaOrder.reduce(function(a, b) {
-      var result = a + b;
-    });
-    return result;
+    for(var i = 0; i < pizzaOrder.length; i++) {
+      result += pizzaOrder[i];
+    }
+      return result;
   }
 }
 
