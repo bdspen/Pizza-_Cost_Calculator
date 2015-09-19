@@ -1,7 +1,9 @@
+//initilizes arrays for storing pizza order
 var pizzaOrder = [];
-var toppingSet = [];
 
+//prices for size
 var prices = {small: "10", medium: "12.50", large: "15"};
+
 //toppings
 var possibleToppings = {
 pepperoni: ".50",
@@ -18,12 +20,15 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 
+//calculates price of Pizza based on toppings and size and
+//pushes that value into an array "pizzaOrder"
 Pizza.prototype.pizzaPrice = function(){
   var price = this.size + this.toppings;
   pizzaOrder.push(price);
   return pizzaOrder[0];
 }
 
+//calculates total order, multiple pizzas, from pizzaOrder array
 var orderTotal = function(pizzaOrder) {
   var result = 0;
   if(pizzaOrder.length <= 1) {
@@ -35,15 +40,3 @@ var orderTotal = function(pizzaOrder) {
       return result;
   }
 }
-
-// var toppingSet = $('input:topping-checkbox:checked').map(function () {
-//   return this.toppingSet;
-//   });
-
-// function CalculatePrice() {
-//   var pizzaPrice =
-//   for(var i = 0; i < toppings.length; i++){
-//     var toppingTotal += Pizza.topping[i];
-//     return toppingTotal;
-//   }
-// }
