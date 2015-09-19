@@ -18,3 +18,15 @@ describe('pizza Price', function() {
     expect(testPizza.pizzaPrice()).to.equal('10.50');
   });
 });
+
+describe('orderTotal', function() {
+  it('calculates the total order, with one pizza', function() {
+    pizzaOrder = ['10.50'];
+    expect(orderTotal()).to.equal('10.50');
+  });
+
+  it('calculates the total order, with one or multiple pizzas', function() {
+    pizzaOrder = ['10.50', '15.50'];
+    expect(orderTotal()).to.equal('26');
+  });
+});

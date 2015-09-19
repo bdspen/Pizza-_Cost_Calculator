@@ -24,6 +24,18 @@ Pizza.prototype.pizzaPrice = function(){
   return pizzaOrder[0];
 }
 
+var orderTotal = function() {
+  if(pizzaOrder.length == 1) {
+    return pizzaOrder[0];
+  }else{
+    pizzaOrder = parseInt(pizzaOrder);
+    pizzaOrder.reduce(function(a, b) {
+      var result = a + b;
+    });
+    return result;
+  }
+}
+
 // var toppingSet = $('input:topping-checkbox:checked').map(function () {
 //   return this.toppingSet;
 //   });
