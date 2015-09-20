@@ -6,6 +6,7 @@ var prices = {small: "10", medium: "12.50", large: "15"};
 
 //toppings
 var possibleToppings = {
+none: "0",
 pepperoni: ".50",
 mushroom: ".50",
 peppers: ".50",
@@ -27,7 +28,6 @@ Pizza.prototype.pizzaPrice = function(){
   pizzaOrder.push(price);
   return pizzaOrder[0];
 }
-
 //calculates total order, multiple pizzas, from pizzaOrder array
 var orderTotal = function(pizzaOrder) {
   var result = 0;
@@ -40,3 +40,24 @@ var orderTotal = function(pizzaOrder) {
       return result;
   }
 }
+
+//start jQuery
+$(document).ready(function(){
+//small pizza button function.
+    $("button#size-small").click(function(event){
+    event.preventDefault();
+    var smallPizza = new Pizza(prices.small, possibleToppings.none);
+    $("#toppings").show();
+    $("#size").hide();
+//fix vvv
+    $("order-total").text(orderTotal(pizzaOrder.push(Pizza.pizzaPrice())));
+  });
+//medium pizza button function
+  $("button#size-medium").click(function(event){
+  event.preventDefault();
+  var smallPizza = new Pizza (prices.medium, possibleToppings.none);
+  $("#toppings").show();
+  $("#size").hide();
+  $("order-total").text(orderTotal());
+});
+});
