@@ -43,21 +43,51 @@ var orderTotal = function(pizzaOrder) {
 
 //start jQuery
 $(document).ready(function(){
+
 //small pizza button function.
-    $("button#size-small").click(function(event){
+  $("button#size-small").click(function(event){
     event.preventDefault();
     var smallPizza = new Pizza(prices.small, possibleToppings.none);
     $("#toppings").show();
     $("#size").hide();
-//fix vvv
-    $("order-total").text(orderTotal(pizzaOrder.push(Pizza.pizzaPrice())));
+    var price = smallPizza.pizzaPrice();
+    $("#order-total").text(pizzaOrder);
   });
+
 //medium pizza button function
   $("button#size-medium").click(function(event){
-  event.preventDefault();
-  var smallPizza = new Pizza (prices.medium, possibleToppings.none);
-  $("#toppings").show();
-  $("#size").hide();
-  $("order-total").text(orderTotal());
-});
+    event.preventDefault();
+    var mediumPizza = new Pizza (prices.medium, possibleToppings.none);
+    $("#toppings").show();
+    $("#size").hide();
+    var price = mediumlPizza.pizzaPrice();
+    $("#order-total").text(orderTotal());
+  });
+
+//large pizza button function
+  $("button#size-large").click(function(event){
+    event.preventDefault();
+    var largePizza = new Pizza(prices.large, possibleToppings.none);
+    $("#toppings").show();
+    $("#size").hide();
+    var price = largePizza.pizzaPrice();
+    $("#order-total").text(pizzaOrder);
+  });
+//button for make another Pizza
+  $("button#another-pizza").click(function(event){
+    event.preventDefault();
+    $("#toppings").hide();
+    $("#size").show();
+  });
+//button for submit order/show total
+  $("button#submit-order").click(function(event){
+    event.preventDefault();
+    $("#display-total").text(orderTotal(pizzaOrder));
+    $("#toppings").hide();
+    $("#size").hide();
+  });
+//update toppings button/submits checklist
+  $("button#update-toppings").click(function(event){
+
+  });
 });
