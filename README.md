@@ -7,7 +7,7 @@
 
 ## Description
 
-# App is currently unfinished, still needs all of the front end functionality and a method to calculate the total order cost.
+### App is currently unfinished, still needs all of the front end functionality.
 
 A user chooses the size and toppings for a pizza and the app calculates the cost of the pizza. A user can also add multiple pizzas to one order.
 
