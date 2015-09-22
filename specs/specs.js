@@ -30,3 +30,12 @@ describe('orderTotal', function() {
     expect(orderTotal(pizzaOrder)).to.equal(26);
   });
 });
+
+describe('addTopping', function() {
+  it('adds toppings(from checkbox) to pizza', function() {
+    var testPizza = new Pizza(prices.small, possibleToppings.none);
+    var toppings = ["onions", "fetaOlive"];
+    addTopping(toppings);
+    expect().to.equal();
+  });
+});

@@ -28,6 +28,9 @@ Pizza.prototype.pizzaPrice = function(){
   pizzaOrder.push(price);
   return pizzaOrder[0];
 }
+//TO COMPLETE!!!! adds toppings to a pizza method
+
+
 //calculates total order, multiple pizzas, from pizzaOrder array
 var orderTotal = function(pizzaOrder) {
   var result = 0;
@@ -40,6 +43,8 @@ var orderTotal = function(pizzaOrder) {
       return result;
   }
 }
+
+
 
 //start jQuery
 $(document).ready(function(){
@@ -60,7 +65,7 @@ $(document).ready(function(){
     var mediumPizza = new Pizza (prices.medium, possibleToppings.none);
     $("#toppings").show();
     $("#size").hide();
-    var price = mediumlPizza.pizzaPrice();
+    var price = mediumPizza.pizzaPrice();
     $("#order-total").text(orderTotal());
   });
 
@@ -73,12 +78,14 @@ $(document).ready(function(){
     var price = largePizza.pizzaPrice();
     $("#order-total").text(pizzaOrder);
   });
+
 //button for make another Pizza
   $("button#another-pizza").click(function(event){
     event.preventDefault();
     $("#toppings").hide();
     $("#size").show();
   });
+
 //button for submit order/show total
   $("button#submit-order").click(function(event){
     event.preventDefault();
@@ -88,6 +95,13 @@ $(document).ready(function(){
   });
 //update toppings button/submits checklist
   $("button#update-toppings").click(function(event){
+    event.preventDefault();
+    var checkValues = [];
+  $('#topping-checkbox input:checked').each(function() {
+    checkValues.push($(this).val());
+    // method to add toppings to a pizza
+
+  });
 
   });
 });
