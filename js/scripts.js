@@ -2,17 +2,17 @@
 var pizzaOrder = [];
 
 //prices for size
-var prices = {small: "10", medium: "12.50", large: "15"};
+var prices = {small: 10, medium: 12.50, large: 15};
 
 //toppings
 var possibleToppings = {
-none: "0",
-pepperoni: ".50",
-mushroom: ".50",
-peppers: ".50",
-onions: ".50",
-fetaOlive: "1.00",
-bacon: "1.00"
+none: 0,
+pepperoni: .50,
+mushroom: .50,
+peppers: .50,
+onions: .50,
+fetaOlive: 1.00,
+bacon: 1.00
 };
 
 //Pizza Constructor
